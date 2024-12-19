@@ -19,7 +19,7 @@ WORKDIR /root/
 
 COPY --from=builder /app/secret-satana .
 
-COPY templates .
+COPY templates templates
 
 EXPOSE 8080
 
