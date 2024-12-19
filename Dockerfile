@@ -19,6 +19,8 @@ WORKDIR /root/
 
 COPY --from=builder /app/secret-satana .
 
+COPY templates .
+
 EXPOSE 8080
 
 ENV SATANA_SELECTED=false
