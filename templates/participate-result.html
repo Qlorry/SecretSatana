@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/style.css">
+
+    <style>
+        /* Page-specific styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: monospace;
+            color: #cccccc;
+            background-color: #0f0f23;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .message {
+            width: 90%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            margin: 15px auto;
+        }
+
+        .message.error {
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            color: #ff6666;
+        }
+
+        .message.success {
+            background-color: rgba(0, 255, 0, 0.1);
+            border: 2px solid rgba(0, 255, 0, 0.3);
+            color: #66ff66;
+        }
+
+        .ascii-art {
+            white-space: pre;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a {
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .ascii-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {{if .Error}}
+        <div class="message error">There was an error: {{.Error}}</div>
+        {{else}}
+        <div class="message success">Thank you for participating!</div>
+        {{end}}
+
+        <!-- ASCII Art at the bottom -->
+        <div class="ascii-art">
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+##########################################################
+        </div>
+
+        <a href="/" class="ascii-button">Go Back</a>
+    </div>
+</body>
+
+</html>

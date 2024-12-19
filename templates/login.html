@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/style.css">
+    <style>
+        form {
+            /* Consistent font for the entire form */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Spacing between inputs and the button */
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            /* Matches the button font */
+            font-size: 18px;
+            padding: 10px 15px;
+            width: 250px;
+            /* Adjust the width as needed */
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Subtle translucent background */
+            border: 2px solid rgba(204, 204, 204, 0.6);
+            /* Matches button border style */
+            color: #cccccc;
+            /* Light text color for contrast */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            /* Matches button shadow */
+            transition: box-shadow 0.2s ease, background-color 0.2s ease;
+
+
+        }
+
+
+        form input[type="text"]:focus,
+        form input[type="password"]:focus {
+            outline: none;
+            /* Remove default outline */
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Slightly brighter on focus */
+            border-color: rgba(255, 255, 255, 0.8);
+            /* Brighter border on focus */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+            /* Stronger shadow on focus */
+        }
+
+        form input[type="text"]::placeholder,
+        form input[type="password"]::placeholder {
+            color: rgba(204, 204, 204, 0.8);
+            /* Light placeholder text */
+            /* Adds a subtle style to placeholders */
+        }
+
+        .small-margin {
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #990a00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1><a href="/login">Login</a> / <a href="/register">Register</a></h1>
+
+        <form class="small-margin" action="/login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="ascii-button small-margin" type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

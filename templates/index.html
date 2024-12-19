@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/style.css">
+    <style>
+        .container {
+            display: grid;
+            width: 90%;
+            max-width: 1200px;
+            grid-template-columns: 25ch 1fr 25ch;
+            /* Fixed column widths for ASCII */
+            gap: 10px;
+            align-items: start;
+            /* Aligns items at the top of the grid */
+        }
+
+        /* Left and Right ASCII Art */
+        .ascii {
+            text-align: center;
+            white-space: unset;
+            /* Optional: background for visualization */
+            /* min-height: 30em; */
+            /* Ensures columns maintain their height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .desktop-art {
+            display: block;
+        }
+
+        .mobile-art {
+            display: none;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 650px) {
+            .desktop-art {
+                display: none;
+            }
+
+            .mobile-art {
+                display: block;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+
+            .ascii {
+                font-size: 14px;
+                height: auto;
+                /* Let height adjust naturally */
+            }
+
+            .ascii.left,
+            .ascii.right {
+                align-self: center;
+                /* Center ASCII ornaments for small screens */
+            }
+        }
+
+        .small-text {
+            font-size: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ascii left desktop-art">
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+        </div>
+        <div class="ascii left mobile-art">
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+        </div>
+        <div class="card">
+            <h1>Welcome, {{.User.Name}}</h1>
+            {{ if .SatanaSelected }}
+            <p>Selected <span class="satana-text">Satana</span> for you: <b>{{.SelectedSatana.Name}}</b></p>
+            {{ else if .User.Participates }}
+            <p>Your <span class="satana-text">Secret Satana</span> was not determined yet...</p>
+            <p>Please wait a bit more</p>
+            {{ else }}
+            <div>
+                <p>If you want to join <span class="satana-text">Secret Satana</span> click button below:</p>
+                <span class="satana-text small-text">by clicking button you agree to sell your soul to Satan and
+                    developers, for ever and ever. Yep there is no going back, you have been warned</span>
+            </div>
+
+            <form action="/participate" method="post">
+                <button type="submit" class="ascii-button">
+                    <!-- <span>&#128293;</span>  -->
+                    <span class="char-color-6r">P</span>
+                    <span class="char-color-6o">a</span>
+                    <span class="char-color-6y">r</span>
+                    <span class="char-color-3g">t</span>
+                    <span class="char-color-6u">i</span>
+                    <span class="char-color-3b">c</span>
+                    <span class="char-color-3l">i</span>
+                    <span class="char-color-6r">p</span>
+                    <span class="char-color-6o">a</span>
+                    <span class="char-color-6y">t</span>
+                    <span class="char-color-3g">e</span>
+                    <!-- <span>&#128293;</span> -->
+                </button>
+            </form>
+            {{ end }}
+        </div>
+        <div class="ascii right desktop-art">
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+            ######################################
+        </div>
+        <div class="ascii right mobile-art">
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+            **************************************
+        </div>
+    </div>
+</body>
+
+</html>

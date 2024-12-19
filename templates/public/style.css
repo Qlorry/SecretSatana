@@ -1,0 +1,239 @@
+/* body {
+    background: #0f0f23;
+    color: #cccccc;
+    font-weight: 300;
+    font-size: 14pt;
+    min-width: 50em;
+} */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Source Code Pro", monospace;
+    background: #0f0f23;
+    font-weight: 300;
+    font-size: 14pt;
+    color: #cccccc;
+}
+
+
+
+/* Center Card */
+.card {
+    min-width: 40ch;
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    /* Matches height of adjacent ASCII art */
+}
+
+.ascii-button {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgba(119, 119, 165, .2);
+    /* background-color: #222; */
+    border: 2px solid #cccccc91;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #cccccc;
+}
+
+.ascii-button span {
+    margin: 0;
+    /* Remove extra spacing */
+    padding: 0;
+    /* Remove padding for tighter alignment */
+    display: inline-block;
+}
+
+.ascii-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
+    border: 2px solid #cccccc;
+}
+
+.ascii-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.char-color-2u {
+    color: #5eabb4;
+}
+
+.char-color-6b {
+    color: #009900;
+}
+
+.char-color-8n {
+    color: #886655;
+}
+
+.char-color-2g4 {
+    color: #01461f;
+}
+
+.char-color-8w {
+    color: #cccccc;
+}
+
+.char-color-2g1 {
+    color: #4d8b03;
+}
+
+.char-color-3m {
+    color: #d4dde4;
+}
+
+.char-color-2g0 {
+    color: #488813;
+}
+
+.char-color-2w {
+    color: #ffffff;
+}
+
+.char-color-6r {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+.char-color-6t {
+    color: #aaaaaa;
+}
+
+.char-color-w {
+    color: #ccc;
+}
+
+.char-color-3g {
+    color: #00cc00;
+}
+
+.char-color-3y {
+    color: #ffff66;
+    text-shadow: 0 0 5px #ffff66, 0 0 10px #ffff66;
+}
+
+.char-color-8e {
+    color: #cccccc;
+}
+
+.char-color-3w {
+    color: #ffffff;
+}
+
+.char-color-8i {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+}
+
+.char-color-3s {
+    color: #e3b585;
+}
+
+.char-color-3l {
+    color: #ccccff;
+}
+
+.char-color-6u {
+    color: #0066ff;
+    text-shadow: 0 0 5px #0066ff;
+}
+
+.char-color-3v {
+    color: #df2308;
+    text-shadow: 0 0 5px #df2308, 0 0 10px #df2308;
+}
+
+.char-color-3b {
+    color: #5555bb;
+}
+
+.char-color-6y {
+    color: #ffff66;
+    text-shadow: 0 0 5px #ffff66;
+}
+
+.char-color-2g2 {
+    color: #7fbd39;
+}
+
+.char-color-3a {
+    color: #a5a8af;
+}
+
+.char-color-3i {
+    color: #a25151;
+}
+
+.char-color-6o {
+    color: #ff9900;
+    text-shadow: 0 0 5px #ff9900;
+}
+
+.char-color-2g3 {
+    color: #427322;
+}
+
+.satana-text {
+    font-size: 20px;
+    font-weight: bold;
+    /* Makes the gradient stand out */
+    background: linear-gradient(90deg,
+            #ff0000,
+            #ff9900,
+            #ffff00);
+    -webkit-background-clip: text;
+    /* Clipping the gradient to the text */
+    -webkit-text-fill-color: transparent;
+    /* Hides the background outside text */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Optional glow */
+    display: inline-block;
+}
+
+.gradient-text {
+    font-weight: bold;
+    /* Makes the gradient stand out */
+    background: linear-gradient(90deg,
+            #ff0000,
+            /* Red */
+            #ff9900,
+            /* Orange */
+            #ffff00,
+            /* Yellow */
+            #00cc00,
+            /* Green */
+            #0066ff,
+            /* Blue */
+            #663399
+            /* Violet */
+        );
+    -webkit-background-clip: text;
+    /* Clipping the gradient to the text */
+    -webkit-text-fill-color: transparent;
+    /* Hides the background outside text */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Optional glow */
+    display: inline-block;
+}
