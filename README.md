@@ -22,6 +22,13 @@ secret-satana
 
 > nano /secret-santa/<domain>.conf
 
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/secret-satana.online/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/secret-satana.online/privkey.pem
+This certificate expires on 2025-03-19.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
 1. Create Symlink to /etc/nginx/sites-available
 
 > ln -s /secret-santa/<domain>.conf /etc/nginx/sites-enabled/
